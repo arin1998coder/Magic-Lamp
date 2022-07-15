@@ -1,0 +1,180 @@
+/* styles the viewport */
+body{
+  padding-left: 4%;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  background-color: #1d2026;
+  min-height: 100vh;
+  width:100%;
+  color:#fff;
+  position: relative;
+}
+
+.nav-item{
+  padding: 0 20px;
+  text-align: right;
+}
+
+/* navbar-menu */
+nav .menu-img{
+  width: 30px;
+  height: 28px;
+  margin-right: 20px;
+  margin-top: 8px;
+  cursor: pointer;   /*tells us the mouse pointer that the content is a link */
+}
+
+nav .logo-img{
+  width: 170px;
+  height: 40px;
+  cursor: pointer;     /*tells us the mouse pointer that the content is a link */
+}
+
+/* designing button */
+
+.button{
+  display: flex;
+  background: #efefef;
+  height: 28px;
+  width: 58px;
+  border-radius:15px;
+  outline: 0;
+  border: 0;
+  cursor:pointer;
+  margin-top:8px;
+  margin-right: 25px;
+}
+
+/* creating a circle inside button */
+
+.button span{
+  display: block;
+  border-radius: 50%;
+  background-color: lightgreen;
+  height: 25px;
+  width: 25px;
+  margin-left: -3px;
+  transition: background-color 0.5s, margin-left 0.5s;
+}
+
+/* Lamp and light positioning */
+
+.lamp-container{
+  position: absolute;    /*this part of div can be placed anywhere in the screen as it has pos:absolute*/
+  top:-20px;            /*to move the lamp more upwards--some top part of the lamp goes out of viewport*/
+  left: 22%;
+  width: 200px;
+}
+
+.lamp{
+  position: relative;
+  width: 100%;
+}
+.light{
+  position: absolute;
+  top:93%;
+  left: 50%;
+  width: 700px;
+  transform: translateX(-51.3%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* written text */
+
+.written-text{
+  max-width:600px;
+  margin-top: 5%;
+  margin-left: 50%;
+}
+
+.written-text h1{
+  font-size:80px;
+  font-weight: 400;
+}
+
+/* Check All Collections button */
+
+.written-text a{
+  text-decoration:none;
+  background: #00986f;
+  padding: 14px 40px;
+  display: inline-block;
+  margin-top: 40px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 18px;
+}
+
+
+/* For the bottom right line design */
+.control{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 100px;
+}
+
+.control .line{
+  width: 200px;
+  height: 4px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 20px;
+}
+
+.line span{
+  width: 50%;
+  height: 8px;
+  display: block;
+  margin-top: -2px;
+  background-color: #00986f;
+  border-radius: 10px;
+}
+
+/* style of button when it is active */
+.active_button{
+  background: green;
+}
+
+/*style of button's circular switch and movement*/
+
+.active_button span{
+  background: white;
+  margin-left: 24px;
+}
+
+
+.light_on{
+  opacity: 1;
+}
+
+/* CSS properties and postioning for tablet and smaller size */
+@media (max-width:992px) {
+  body{
+    margin-left:2%;
+  }
+  .lamp-container{
+    position:relative ;
+    top:-150px;            /*to move the lamp more upwards--some top part of the lamp goes out of viewport*/
+    left: 22%;
+    width: 200px;
+  }
+  .written-text{
+    margin: auto;
+    max-width:600px;
+    margin-left: 15px;
+  }
+  .written-text p{
+    padding-top: 5%;
+    line-height: 1.2rem;
+  }
+  .control{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100px;
+  }
+  .control .line{
+    margin-bottom: 12px;
+  }
+}
